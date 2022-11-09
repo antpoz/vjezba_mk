@@ -110,5 +110,118 @@
 				</tbody>
 			</table>
 		</div>
+		<hr>
+		<h1>Forma za registraciju studenta</h1>
+		<form action="mailto:pozniak.antea@gmail.com?subject=PrijavaStudenta" method="POST" enctype="text/plain" accept-charset="UTF-8" autocomplete="on">
+			<div class="container">
+				<div class="row">
+					<div class="col-10">
+						<label for="ime">Ime:</label>
+					</div>
+					<div class="col-90">
+						<input type="text" id="ime" name="ime" placeholder="Unesite ime" autofocus required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="prezime">Prezime:</label>
+					</div>
+					<div class="col-90">
+						<input type="text" id="prezime" name="prezime" placeholder="Unesite prezime" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="email">Email:</label>
+					</div>
+					<div class="col-90">
+						<input type="email" id="email" name="email" placeholder="Mora sadržavati @,." required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="mobitel">Mobitel:</label>
+					</div>
+					<div class="col-90">
+						<input type="tel" id="mobitel" name="mobitel" maxlength="10" pattern="[0-9]{1}[0-9]{9}" placeholder="Dozvoljeno 10 znakova" required>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="spol">Spol:</label>
+					</div>
+					<div class="col-90">
+						<input type="radio" id="musko" name="spol" value="musko" required value="1"/>Muško
+						<input type="radio" id="zensko" name="spol" value="zensko" value="2"/>Žensko
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="dob">Datum rođenja:</label>
+					</div>
+					<div class="col-90">
+						<input type="date" required id="dob" name="dob" min='1922-11-09' max='2022-11-09'>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="adresa">Adresa:</label>
+					</div>
+					<div class="col-90">
+						<textarea name="adresa" id="adresa" cols="30" rows="10"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="grad">Grad:</label>
+					</div>
+					<div class="col-90">
+						<input type="text" id="grad" name="grad">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="zip">ZIP:</label>
+					</div>
+					<div class="col-90">
+						<input type="number" id="zip" name="zip" max="5" pattern="[1-9]{1}[0-9]{9}" placeholder="Dozvoljeno 5 brojeva">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="obrazovanje" required >Stupanj obrazovanja:</label>
+					</div>
+					<div class="col-90">
+						<select name="obrazovanje" id="obrazovanje">
+							<option value=" ">Odaberite stupanj obrazovanja:</option>
+							<option value="Poslijediplomski">Poslijediplomski</option>
+							<option value="Diplomski">Diplomski</option>
+							<option value="Preddiplomski">Preddiplomski</option>
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="smjer">Smjer:</label>
+					</div>
+					<div class="col-90">
+						<input type="checkbox" class="smjer" id="dz" name="smjer[]" value="Dizajn">Dizajn<br/>
+						<input type="checkbox" class="smjer" id="tt" name="smjer[]" value="Tehnicko tehnoloski">Tehničko-tehnološki<br/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10">
+						<label for="lozinka">Lozinka:</label>
+					</div>
+					<div class="col-90">
+						<input type="password" id="lozinka" name="lozinka" maxlength="8">
+					</div>
+				</div>
+				<div class="row" id="submit">
+					<input type="submit" value="Pošalji" >
+					<input type="reset" value="Poništi">
+				</div>  
+			</div>
+		</form>
 	</body>
 </html>
