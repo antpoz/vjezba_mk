@@ -3,7 +3,6 @@ html {
 }
 
 body,html {
-  margin: 0;
   font-family: sans-serif;
 }
 
@@ -341,4 +340,126 @@ background-color: #32a336;
 }
 #submit{
 	padding-top: 10px;
+}
+
+#elementi {
+    width: 150px;
+    height: 150px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+    line-height: 140px;
+    position: absolute;
+	margin-top: 300px;
+	margin-left: 30%;
+}
+
+.red1 {
+    top: 0;
+	font-family: Georgia, serif;    
+	font-size: 10px;
+}
+.red2 {
+    top: 150px;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+}
+.red3 {
+    top: 300px;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+.red4 {
+    top: 450px;
+    font-family: serif;
+    font-size: 40px;
+}
+.red5 {
+    top: 600px;
+    font-family: cursive;
+    font-size: 50px;
+}
+
+.stupac1 {
+    left: 0;
+	border-radius:0% 100% 100% 0% / 100% 0% 100% 0%; 
+}
+.stupac2 {
+    left: 150px;
+	border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%; 
+}
+.stupac3 {
+    left: 300px;
+    border-radius: 100% 0% 0% 100% / 100% 0% 100% 0%;
+}
+.stupac4 {
+    left: 450px;
+    border-radius: 100% 0% 0% 100% / 50% 0% 100% 50%;
+}
+.stupac5 {
+    left: 600px;
+    border-radius: 0% 100% 100% 0% / 100% 50% 50% 0%;
+}
+
+
+
+.red1.stupac1 {
+    background-color: rgba(255, 0, 132, 0.5);
+}
+.red1.stupac3 {
+    background-color: rgba(157, 0, 81, 0.6);
+}
+.red1.stupac5 {
+    background-color: rgba(200, 158, 180, 0.7);
+}
+.red2.stupac2 {
+    background-color: rgba(128, 56, 93, 0.8);
+}
+.red2.stupac4 {
+    background-color: rgba(104, 88, 96, 0.9);
+}
+.red3.stupac1 {
+    background-color: rgba(123, 29, 141, 1);
+}
+.red3.stupac3 {
+    background-color: rgba(171, 155, 0, 0.9);
+    color: white;
+}
+.red3.stupac5 {
+    background-color: rgba(171, 13, 0, 0.8);
+}
+.red4.stupac2 {
+    background-color: rgba(0, 151, 171, 0.7);
+}
+.red4.stupac4 {
+    background-color: rgba(0, 171, 95, 0.6);
+}
+.red5.stupac1 {
+    background-color: rgba(150, 220, 138, 0.5);
+}
+.red5.stupac3 {
+    background-color: rgba(72, 99, 67, 0.4);
+}
+.red5.stupac5 {
+    background-color: rgba(13, 30, 55, 0.3);
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .container div {
+        border-radius: 50%;
+        border-width: 1px !important;
+        position: static !important;
+        float: left;
+		margin-top: auto !important;
+    }
+
+    .red3.stupac3 {
+        color: inherit;
+    }
+
+    .red5.stupac5 {
+        display: none;
+    }
 }
