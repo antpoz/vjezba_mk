@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    background-image: url(slike/grid.jpg);
+    perspective: 2000px;
+    perspective-origin: 400px 800px;
+}
+
+/* ######################## ZADATAK 1 ############################  */
+#zadatak1 {
+    margin: 1em auto;
+    width: 50%;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* WebKit and Opera browsers */
+@-webkit-keyframes vrtuljak {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+
+/* all other browsers */
+@keyframes vrtuljak {
+    from {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    to {
+        -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+    }
+}
+
+#vrtuljak {
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: magenta;
+
+    -webkit-animation-name: vrtuljak;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+
+    animation-name: vrtuljak;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#vrtuljak:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+/* ######################## ZADATAK 2 ############################  */
+
+.zadatak2 {
+    perspective: 800px;
+}
+
+.kocka {
+    -webkit-transform-style: preserve-3d;
+    position: relative;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    animation: spin 20s infinite linear;
+    top: 10rem;
+    -webkit-transform-origin: 100% 50%;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotateX(-45deg) rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateX(-45deg) rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes pulsate {
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.lice {
+    width: 300px;
+    height: 300px;
+    border: 6px outset #ccc;
+    text-align: center;
+    font-size: 60pt;
+    position: absolute;
+    background-color: #2653ad;
+    -webkit-transition: -webkit-transform 1s ease-out, opacity 1s linear;
+    box-sizing: border-box;
+    -webkit-transform-origin: 50% 300px;
+}
+
+.kocka:hover .lijevo {
+    -webkit-transform: rotateY(90deg) translateZ(150px) rotateX(-90deg);
+}
+
+.lijevo {
+    -webkit-transform: rotateY(90deg) translateZ(150px) rotateX(0deg);
+    background: url("slike/slika1.jpg");
+    background-size: 55%;
+}
+
+.kocka:hover .desno {
+    -webkit-transform: rotateY(-90deg) translateZ(150px) rotateX(-90deg);
+}
+
+.desno {
+    -webkit-transform: rotateY(-90deg) translateZ(150px);
+    background: url("slike/slika2.jpg");
+    background-size: 55%;
+}
+
+.kocka:hover .naprijed {
+    -webkit-transform: translateZ(150px) rotateX(-90deg);
+}
+
+.naprijed {
+    -webkit-transform: translateZ(150px);
+    background: url("https://raw.githubusercontent.com/antpoz/vjezba_mk/main/slike/nagrada.jpg");
+    background-size: 95%;
+}
+
+.kocka:hover .iza {
+    -webkit-transform: translateZ(-150px) rotateX(90deg);
+}
+
+.iza {
+    -webkit-transform: translateZ(-150px);
+    background: url("https://raw.githubusercontent.com/antpoz/vjezba_mk/main/slike/golf1.jpg");
+    background-size: 55%;
+}
+
+.kocka:hover .gore {
+    opacity: 0;
+}
+
+.gore {
+    -webkit-transform: rotateX(90deg) translateZ(150px);
+    background: url("https://raw.githubusercontent.com/antpoz/vjezba_mk/main/slike/colorblind.jpg");
+    background-size: 160%;
+    -webkit-transform-origin: 50% 50%;
+}
+
+
+
+.dole {
+    -webkit-transform: rotateX(90deg) translateZ(-150px);
+    background: url("https://raw.githubusercontent.com/antpoz/vjezba_mk/main/slike/ekipa.jpg");
+    background-size: 100%;
+    -webkit-transform-origin: 50% 50%;
+}
